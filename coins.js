@@ -1,28 +1,4 @@
-console.log("The JS is at least linked, right?", );
-
-
-/*
-  Input: 0.67
-  Output:
-  {
-    quarters: 2,
-    dimes: 1,
-    nickels: 1,
-    pennies: 2
-  }
-
-*/
-
-
-
-
-
 // Initialize a JavaScript object to hold the coins
-
-
-
-// if (whatever amount) - .25 > 0, then subtract .25 and add one "quarter"
-// otherwise.... proceed to dimes and repeat process
 
 	var coinPurse = {
 		quarters: 0,
@@ -31,6 +7,7 @@ console.log("The JS is at least linked, right?", );
 		pennies: 0
 	};
 
+//get money amount input from user
 var moneyInput = prompt("Please input the dollar amount you want to coinify as efficiently as possible. (Like '0.88' for 88 cents)")
 
 function coinCounter (moneyAmt) {
@@ -50,11 +27,8 @@ console.log("money amount?", moneyAmt);
 			moneyAmt = moneyAmt - coinPurse.nickels*.05;
 		} if (moneyAmt < .05 && moneyAmt - 0.01 > 0) {
 			coinPurse.pennies = Math.floor(moneyAmt/.01);
-					}
-
+		}
 }
-
-
 		return coinPurse;
 }
 
